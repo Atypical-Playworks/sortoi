@@ -1,0 +1,70 @@
+{
+  "name": "sortoi",
+  "version": "1.0.1",
+  "description": "Una herramienta CLI para organizar archivos de forma inteligente utilizando IA.",
+  "author": "Miluska Romero (https://github.com/Atypical-Playworks)",
+  "license": "ISC",
+  "homepage": "https://github.com/Atypical-Playworks/sortoi#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Atypical-Playworks/sortoi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Atypical-Playworks/sortoi/issues"
+  },
+  "keywords": [
+    "cli",
+    "files",
+    "organizer",
+    "ai",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "sortoi": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "dev": "cross-env NODE_ENV=development tsx src/index.ts",
+    "dev:watch": "cross-env NODE_ENV=development tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean:db": "node scripts/clean-db.js",
+    "history": "tsx src/app/history.ts"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "packageManager": "pnpm@10.18.2",
+  "devDependencies": {
+    "@types/cli-progress": "^3.11.6",
+    "@types/node": "^24.9.2",
+    "cross-env": "^10.1.0",
+    "eslint": "^9.38.0",
+    "prettier": "^3.6.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.5"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^2.0.25",
+    "@google/generative-ai": "^0.24.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/inquirer": "^9.0.9",
+    "@types/winston": "^2.4.4",
+    "ai": "^5.0.82",
+    "better-sqlite3": "^12.4.1",
+    "chalk": "^5.6.2",
+    "cli-progress": "^3.12.0",
+    "commander": "^14.0.2",
+    "dotenv": "^17.2.3",
+    "inquirer": "^12.10.0",
+    "p-limit": "^7.2.0",
+    "winston": "^3.18.3",
+    "zod": "^4.1.12"
+  }
+}
